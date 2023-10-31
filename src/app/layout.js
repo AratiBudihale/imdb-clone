@@ -1,17 +1,28 @@
-import './globals.css'
-import { Inter } from '@next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Imdb app',
-  description: 'Crate new project of imdb',
-}
+import Header from "../component/Header";
+//import Navbar from "@/components/Navbar";
+//import SearchBox from "@/components/SearchBox";
+import "./globals.css";
+import Providers from "./Providers";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <Providers>
+          {/* Header */}
+          <Header />
+
+          {/* Navbar */}
+
+        
+
+          {/* SearchBox */}
+
+          
+
+          {children}
+        </Providers>
+      </body>
     </html>
-  )
+  );
 }
